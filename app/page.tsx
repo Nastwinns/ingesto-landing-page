@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Zap, CheckCircle, Code, Target, Cog, Rocket, TrendingUp, Heart, Shield, Server } from "lucide-react"
+import { Zap, CheckCircle, Code, Target, Cog, Rocket, TrendingUp, Heart, Shield, Server, X } from "lucide-react"
 import { useState, useEffect } from "react"
 
 type Language = "en" | "fr" | "pt" | "es"
@@ -439,30 +439,68 @@ export default function IngestoLanding() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-sans animate-fade-in-up">
               {language === "fr"
-                ? "Transformez Vos Données en Avantage Concurrentiel"
+                ? "L'Alternative Européenne à AWS Bedrock"
                 : language === "pt"
-                  ? "Transforme Seus Dados em Vantagem Competitiva"
+                  ? "A Alternativa Europeia ao AWS Bedrock"
                   : language === "es"
-                    ? "Transforme Sus Datos en Ventaja Competitiva"
-                    : "Transform Your Data Into Competitive Advantage"}
+                    ? "La Alternativa Europea a AWS Bedrock"
+                    : "The European Alternative to AWS Bedrock"}
             </h1>
             <p className="mt-6 text-xl leading-8 text-emerald-100 font-serif animate-fade-in-up animation-delay-200">
               {language === "fr"
-                ? "Solutions RAG sécurisées qui génèrent 300% de ROI en 6 mois"
+                ? "RAG sécurisé, déployé en 48h, conforme RGPD par design - Sans les surprises de facturation cloud"
                 : language === "pt"
-                  ? "Soluções RAG seguras que geram 300% de ROI em 6 meses"
+                  ? "RAG seguro, implantado em 48h, conforme LGPD por design - Sem surpresas de faturamento cloud"
                   : language === "es"
-                    ? "Soluciones RAG seguras que generan 300% de ROI en 6 meses"
-                    : "Secure RAG solutions that deliver 300% ROI in 6 months"}
+                    ? "RAG seguro, desplegado en 48h, conforme GDPR por diseño - Sin sorpresas de facturación cloud"
+                    : "Secure RAG, deployed in 48h, GDPR-compliant by design - No cloud billing surprises"}
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm animate-fade-in-up animation-delay-300">
+              <span className="bg-emerald-700/50 px-3 py-1 rounded-full text-emerald-100 border border-emerald-500/30">
+                {language === "fr"
+                  ? "🇫🇷 Équipe française"
+                  : language === "pt"
+                    ? "🇫🇷 Equipe francesa"
+                    : language === "es"
+                      ? "🇫🇷 Equipo francés"
+                      : "🇫🇷 French team"}
+              </span>
+              <span className="bg-emerald-700/50 px-3 py-1 rounded-full text-emerald-100 border border-emerald-500/30">
+                {language === "fr"
+                  ? "⚡ 48h vs 6 mois"
+                  : language === "pt"
+                    ? "⚡ 48h vs 6 meses"
+                    : language === "es"
+                      ? "⚡ 48h vs 6 meses"
+                      : "⚡ 48h vs 6 months"}
+              </span>
+              <span className="bg-emerald-700/50 px-3 py-1 rounded-full text-emerald-100 border border-emerald-500/30">
+                {language === "fr"
+                  ? "💰 Prix fixe"
+                  : language === "pt"
+                    ? "💰 Preço fixo"
+                    : language === "es"
+                      ? "💰 Precio fijo"
+                      : "💰 Fixed pricing"}
+              </span>
+              <span className="bg-emerald-700/50 px-3 py-1 rounded-full text-emerald-100 border border-emerald-500/30">
+                {language === "fr"
+                  ? "🔒 Zero-Trust"
+                  : language === "pt"
+                    ? "🔒 Zero-Trust"
+                    : language === "es"
+                      ? "🔒 Zero-Trust"
+                      : "🔒 Zero-Trust"}
+              </span>
+            </div>
             <p className="mt-4 text-lg leading-7 text-emerald-200 font-serif max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
               {language === "fr"
-                ? "Infrastructure clé-en-main sur votre cloud privé (AWS, bientôt GCP/Azure). Déploiement en 10 minutes, conformité RGPD garantie."
+                ? "Pendant qu'AWS vous facture par token et vous enferme dans leur écosystème, nous déployons votre RAG sur VOTRE infrastructure avec un prix transparent."
                 : language === "pt"
-                  ? "Infraestrutura pronta para uso em sua nuvem privada (AWS, em breve GCP/Azure). Implantação em 10 minutos, conformidade LGPD garantida."
+                  ? "Enquanto a AWS cobra por token e te prende em seu ecossistema, implantamos seu RAG na SUA infraestrutura com preço transparente."
                   : language === "es"
-                    ? "Infraestructura lista para usar en su nube privada (AWS, pronto GCP/Azure). Despliegue en 10 minutos, cumplimiento GDPR garantizado."
-                    : "Turn-key infrastructure on your private cloud (AWS, soon GCP/Azure). 10-minute deployment, GDPR compliance guaranteed."}
+                    ? "Mientras AWS cobra por token y te encierra en su ecosistema, desplegamos tu RAG en TU infraestructura con precio transparente."
+                    : "While AWS charges per token and locks you into their ecosystem, we deploy your RAG on YOUR infrastructure with transparent pricing."}
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-600">
               <Button
@@ -1120,6 +1158,180 @@ export default function IngestoLanding() {
                       : "View Technical Demo"}
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 bg-slate-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4 font-sans">
+              {language === "fr"
+                ? "Pourquoi Pas AWS/Azure/GCP ?"
+                : language === "pt"
+                  ? "Por Que Não AWS/Azure/GCP?"
+                  : language === "es"
+                    ? "¿Por Qué No AWS/Azure/GCP?"
+                    : "Why Not AWS/Azure/GCP?"}
+            </h2>
+            <p className="text-slate-300 text-lg font-serif max-w-3xl mx-auto">
+              {language === "fr"
+                ? "Les géants du cloud vous vendent de la complexité. Nous vendons de la simplicité."
+                : language === "pt"
+                  ? "Os gigantes da nuvem vendem complexidade. Nós vendemos simplicidade."
+                  : language === "es"
+                    ? "Los gigantes de la nube venden complejidad. Nosotros vendemos simplicidad."
+                    : "Cloud giants sell complexity. We sell simplicity."}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Cloud Giants Problems */}
+            <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-red-300 mb-4 font-sans flex items-center">
+                <X className="h-6 w-6 mr-2" />
+                {language === "fr"
+                  ? "Avec les Géants du Cloud"
+                  : language === "pt"
+                    ? "Com os Gigantes da Nuvem"
+                    : language === "es"
+                      ? "Con los Gigantes de la Nube"
+                      : "With Cloud Giants"}
+              </h3>
+              <ul className="space-y-3 text-red-200 font-serif">
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "6+ mois de développement avec une équipe ML"
+                    : language === "pt"
+                      ? "6+ meses de desenvolvimento com equipe ML"
+                      : language === "es"
+                        ? "6+ meses de desarrollo con equipo ML"
+                        : "6+ months development with ML team"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Facturation imprévisible (tokens, compute, storage)"
+                    : language === "pt"
+                      ? "Faturamento imprevisível (tokens, compute, storage)"
+                      : language === "es"
+                        ? "Facturación impredecible (tokens, compute, storage)"
+                        : "Unpredictable billing (tokens, compute, storage)"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Vos données transitent par leurs serveurs US"
+                    : language === "pt"
+                      ? "Seus dados transitam por servidores US"
+                      : language === "es"
+                        ? "Sus datos transitan por servidores US"
+                        : "Your data transits through their US servers"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Support généraliste, pas d'expertise RAG"
+                    : language === "pt"
+                      ? "Suporte generalista, sem expertise RAG"
+                      : language === "es"
+                        ? "Soporte generalista, sin expertise RAG"
+                        : "Generic support, no RAG expertise"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Vendor lock-in avec leurs outils propriétaires"
+                    : language === "pt"
+                      ? "Vendor lock-in com ferramentas proprietárias"
+                      : language === "es"
+                        ? "Vendor lock-in con herramientas propietarias"
+                        : "Vendor lock-in with proprietary tools"}
+                </li>
+              </ul>
+            </div>
+
+            {/* Ingesto Solution */}
+            <div className="bg-emerald-900/20 border border-emerald-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-emerald-300 mb-4 font-sans flex items-center">
+                <CheckCircle className="h-6 w-6 mr-2" />
+                {language === "fr"
+                  ? "Avec Ingesto"
+                  : language === "pt"
+                    ? "Com Ingesto"
+                    : language === "es"
+                      ? "Con Ingesto"
+                      : "With Ingesto"}
+              </h3>
+              <ul className="space-y-3 text-emerald-200 font-serif">
+                <li className="flex items-start">
+                  <span className="text-emerald-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "48h de déploiement clé-en-main"
+                    : language === "pt"
+                      ? "48h de implantação pronta para uso"
+                      : language === "es"
+                        ? "48h de despliegue listo para usar"
+                        : "48h turn-key deployment"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Prix fixe mensuel, pas de surprises"
+                    : language === "pt"
+                      ? "Preço fixo mensal, sem surpresas"
+                      : language === "es"
+                        ? "Precio fijo mensual, sin sorpresas"
+                        : "Fixed monthly price, no surprises"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Vos données restent sur VOTRE infrastructure"
+                    : language === "pt"
+                      ? "Seus dados ficam na SUA infraestrutura"
+                      : language === "es"
+                        ? "Sus datos quedan en SU infraestructura"
+                        : "Your data stays on YOUR infrastructure"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Équipe d'experts RAG dédiée 24/7"
+                    : language === "pt"
+                      ? "Equipe de especialistas RAG dedicada 24/7"
+                      : language === "es"
+                        ? "Equipo de expertos RAG dedicado 24/7"
+                        : "Dedicated RAG experts team 24/7"}
+                </li>
+                <li className="flex items-start">
+                  <span className="text-emerald-400 mr-2">•</span>
+                  {language === "fr"
+                    ? "Open-source, portable sur tout cloud"
+                    : language === "pt"
+                      ? "Open-source, portável em qualquer nuvem"
+                      : language === "es"
+                        ? "Open-source, portable en cualquier nube"
+                        : "Open-source, portable across any cloud"}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-3 text-lg transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-emerald-500/50"
+              onClick={openCalendly}
+            >
+              {language === "fr"
+                ? "Voir la Différence en 30min"
+                : language === "pt"
+                  ? "Ver a Diferença em 30min"
+                  : language === "es"
+                    ? "Ver la Diferencia en 30min"
+                    : "See the Difference in 30min"}
+            </Button>
           </div>
         </div>
       </section>
